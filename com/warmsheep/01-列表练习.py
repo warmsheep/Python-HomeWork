@@ -182,3 +182,8 @@ while not exit_flag:
             for index, p in enumerate(products):
                 print("%s %s %s" %(index,p[0],p[1]))
         exit_flag=True
+
+
+
+
+
