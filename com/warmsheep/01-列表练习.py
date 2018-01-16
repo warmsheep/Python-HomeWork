@@ -109,7 +109,7 @@ for index,item in enumerate(names):#enumerate函数，index，item分别代表�
 #11.循环names列表，打印每个元素的索引值和元素，当索引值为偶数时，把对应的元素改为-1
 print(names)
 for index,item in enumerate(names):
-    if index%2 == 0:
+    if index%2 ==0:
         names[index] = -1
 #0 old_driver
 # 2 ['oldboy', 'oldgirl']
