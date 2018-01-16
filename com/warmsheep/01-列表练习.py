@@ -129,3 +129,56 @@ print(s) #12
 
 #13.现有商品列表如下：
 #products={["Iphone8",6888],["MacPro",14800],["小米6",2499],["Coffee",31],["Book",80],["Nike Shoes",799]}
+
+# products=[["Iphone8",6888],["MacPro",14800],["小米6",2499],["Coffee",31],["Book",80],["Nike Shoes",799]]
+# print("------商品列表------")
+# for x,y in enumerate(products):
+#     print(x,y[0],y[1])
+
+#14 写一个循环，不断的问客户想买什么，用户选择一个编号，就把对应的商品添加到购物车，最终用户输入q退出时，打印购物车商品列表
+#我的解答：
+products=[["Iphone8",6888],["MacPro",14800],["小米6",2499],["Coffee",31],["Book",80],["Nike Shoes",799]]
+print("------商品列表------")
+for x,y in enumerate(products):
+    print(x,y[0],y[1])
+
+shopcarts=[]
+exit_flag = False #标志位
+while not exit_flag: #表示不退出程序
+    consumer_choice=input("请输入您想要购买的商品编号")
+    if consumer_choice.isdigit() == True: #判断输入的值是不是数字，==True也可省略
+        if int(consumer_choice)>=0 and int(consumer_choice)<=5: #添加条件数值在0-5之间
+            shopcarts.append(products[int(consumer_choice)]) #将输入的值，存储到shopcarts列表里
+            print("已将商品 %s 加入购物车." %(products[int(consumer_choice)]))
+        else:
+            print("你好，该商品不存在")
+    elif consumer_choice=="q":
+        print("----您购买了以下商品")
+        for index,item in enumerate(shopcarts):
+            print(index,item[0],item[1])
+        exit_flag=True
+    else: #当输入的为非数字，提示非法
+        print("你好,您输入的值非法,请输入数字")
+
+#老师的解答:
+products=[["Iphone8",6888],["MacPro",14800],["小米6",2499],["Coffee",31],["Book",80],["Nike Shoes",799]]
+shoppin_cart=[]
+exit_flag = False #标志位
+while not exit_flag:
+    print("------商品列表------")
+    for index, p in enumerate(products):
+        print("%s   %s   %s" %(index,p[0],p[1]))
+    chioce = input("请输入想买的商品编号：")
+    if choice.isdigit():
+        choice = int(choice)
+        if choice >= 0 and choice <= len(products):
+            shoppin_cart.append(products[choice])
+            print("您已将 %s 加入购物车。" %(products[chioce]))
+        else:
+            print("商品不存在")
+    elif choice=="q":
+        if len(shoppin_cart)>0: #判断shopping_cart是否有内容，没有就直接退出
+            print("-----您已购买以下商品-----")
+            for index, p in enumerate(products):
+                print("%s %s %s" %(index,p[0],p[1]))
+        exit_flag=True
