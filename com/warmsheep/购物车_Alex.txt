@@ -1,0 +1,3 @@
+username::Alex
+rest_wage::7981
+shoppint_history::[{'name': '电脑', 'price': 1999}, {'name': '游艇', 'price': 20}]

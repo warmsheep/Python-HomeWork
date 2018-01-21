@@ -130,10 +130,10 @@ print(s) #12
 #13.现有商品列表如下：
 #products={["Iphone8",6888],["MacPro",14800],["小米6",2499],["Coffee",31],["Book",80],["Nike Shoes",799]}
 
-# products=[["Iphone8",6888],["MacPro",14800],["小米6",2499],["Coffee",31],["Book",80],["Nike Shoes",799]]
-# print("------商品列表------")
-# for x,y in enumerate(products):
-#     print(x,y[0],y[1])
+products=[["Iphone8",6888],["MacPro",14800],["小米6",2499],["Coffee",31],["Book",80],["Nike Shoes",799]]
+print("------商品列表------")
+for x,y in enumerate(products):
+    print(x,y[0],y[1])
 
 #14 写一个循环，不断的问客户想买什么，用户选择一个编号，就把对应的商品添加到购物车，最终用户输入q退出时，打印购物车商品列表
 #我的解答：
